@@ -4,7 +4,7 @@
   "height": 300,
 
   "data": {
-    "url": "https://raw.githubusercontent.com/nkan0016/FIT3179/main/crime_and_incarceration_by_state.csv"
+    "url": "https://raw.githubusercontent.com/nkan0016/FIT3179-DV2/main/data/crime_and_incarceration_by_state.csv"
   },
     "params": [
     {

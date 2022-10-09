@@ -5,7 +5,7 @@
   "height": 400,
   "projection": {"type": "albersUsa"},
   "data": {
-      "url": "https://raw.githubusercontent.com/nkan0016/FIT3179/main/us_states.json",
+      "url": "https://raw.githubusercontent.com/nkan0016/FIT3179-DV2/main/data/us_states.json",
       "format": {"type": "topojson", "feature": "gz_2010_us_040_00_20m"}
   },
   "transform": [
@@ -13,7 +13,7 @@
       "lookup": "properties.NAME",
       "from": {
         "data": {
-          "url": "https://raw.githubusercontent.com/nkan0016/FIT3179/main/prison_custody_by_state.csv",
+          "url": "https://raw.githubusercontent.com/nkan0016/FIT3179-DV2/main/data/prison_custody_by_state.csv",
           "format": {"type": "csv"}
         },
         "key": "jurisdiction",
