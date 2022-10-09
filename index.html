@@ -37,6 +37,12 @@
                 <p>Despite being a relatively safe and crime-free country, the United States of America
                     has the highest prison population rate in the world!
                 </p>
+
+                <input type="radio" id="USA" name="map" checked onclick="showMap();">
+                <label for="USA">USA Map</label>
+
+                <input type="radio" id="World" name="map" onclick="showMap();">
+                <label for="World">World Map</label>
             </div>
         </div>
     </div>
@@ -44,8 +50,20 @@
 
     
     <script type="text/javascript">
+        const usaBtn = document.getElementById("USA");
+        const worldBtn = document.getElementById("World");
         var specVis1 = "usamap.json";
+        var specVis2 = "worldmap.json";
         vegaEmbed('#vis1', specVis1)
+
+        function showMap() {
+            if(usaBtn.checked) {
+                vegaEmbed('#vis1', specVis1)
+            } else if(worldBtn.checked) {
+                vegaEmbed('#vis1', specVis2)
+            }
+        }
+
     </script>
 </body>
 </html>

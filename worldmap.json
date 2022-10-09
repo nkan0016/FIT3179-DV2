@@ -1,38 +1,68 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "Prison Population per 10,000 People in USA (2016)",
-    "width": 800,
-    "height": 400,
-    "projection": {"type": "albersUsa"},
-    "data": {
-        "url": "https://raw.githubusercontent.com/nkan0016/FIT3179-DV2/main/data/us_states.json",
-        "format": {"type": "topojson", "feature": "gz_2010_us_040_00_20m"}
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 800,
+  "height": 400,
+  "title": "Prison Rates Around the World",
+  "projection": {"type": "equalEarth"},
+  "data": {
+    "url": "https://raw.githubusercontent.com/nkan0016/FIT3179-DV2/main/data/countries_topo.json",
+    "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
+  },
+  
+
+  "layer": [
+    {
+      "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "white"},
+      "encoding": {
+        "tooltip": [
+          {"field": "properties.NAME", "type": "nominal", "title": "Country"},
+          {"field": "No Data", "type": "nominal", "title": "Prison Pop. per 10,000"}
+        ]
+      }
     },
-    "transform": [
-      {
-        "lookup": "properties.NAME",
-        "from": {
-          "data": {
-            "url": "https://raw.githubusercontent.com/nkan0016/FIT3179-DV2/main/data/prison_custody_by_state.csv",
-            "format": {"type": "csv"}
-          },
-          "key": "jurisdiction",
-          "fields": ["state", "y2016"]
-        }
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/nkan0016/FIT3179-DV2/main/data/graticules_topo.json",
+        "format": {"type": "topojson", "feature": "ne_110m_graticules_30"}
       },
-      {"calculate": "round(10000*datum.y2016 / datum.state)", "as": "Prison Population per 10,000"}
-    ],
-    "mark": {"type": "geoshape", "stroke": "black"},
-    "encoding": {
-      "color": {
-        "field": "Prison Population per 10,000",
-        "title": "Prison Pop. per 10,000",
-        "type": "quantitative",
-        "scale": {"type": "band", "range": ["#fef0d9", "#fdcc8a", "#fc8d59", "#e34a33", "#b30000"]}
+      "mark": {"type": "geoshape", "fill": null, "stroke": "lightgray"}
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/FIT3179/Vega-Lite/main/7_others/oceans.topojson",
+        "format": {"type": "topojson", "feature": "oceans"}
       },
-      "tooltip": [
-        {"field": "properties.NAME", "type": "nominal", "title": "State"},
-        {"field": "Prison Population per 10,000", "type": "quantitative", "title":"Prison Pop. per 10,000"}
-      ]
-    }
-  }
+      "mark": {"type": "geoshape", "fill": "skyblue"}
+    },
+
+    {
+      "transform": [
+        {
+          "lookup": "properties.NAME",
+          "from": {
+            "data": {
+              "url": "https://raw.githubusercontent.com/nkan0016/FIT3179-DV2/main/data/prison_rate.csv",
+              "format": {"type": "csv"}
+            },
+            "key": "Title",
+            "fields": ["Prison Population Rate"]
+          }
+        },
+        {"calculate": "datum['Prison Population Rate'] / 10", "as": "Prison Population per 10,000"}
+      ],
+      "mark": {"type": "geoshape", "stroke": "black"},
+      "encoding": {
+        "color": {
+          "field": "Prison Population per 10,000",
+          "title": "Prison Pop. per 10,000",
+          "type": "quantitative"
+        },
+        "tooltip": [
+          {"field": "properties.NAME", "type": "nominal", "title": "Country"},
+          {"field": "Prison Population per 10,000", "type": "quantitative", "title": "Prison Pop. per 10,000"}
+        ]
+      }
+    }   
+    
+  ]
+}
