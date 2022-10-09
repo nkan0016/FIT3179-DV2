@@ -1,0 +1,10 @@
+#banner {
+    background-color: #400807;
+    height: 110px;
+    text-align: center;
+}
+
+.title {
+    color: lightgrey;
+    font-size: 40px;
+}

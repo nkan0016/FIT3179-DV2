@@ -1,0 +1,96 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 600,
+  "height": 300,
+
+  "data": {
+    "url": "https://raw.githubusercontent.com/nkan0016/FIT3179/main/crime_and_incarceration_by_state.csv"
+  },
+    "params": [
+    {
+      "name": "State_selection",
+      "bind": {
+        "input": "select",
+        "options": [
+          null,
+          "CALIFORNIA",
+          "FLORIDA",
+          "NEW YORK",
+          "TEXAS"
+        ],
+        "labels": [
+          "None",
+          "California",
+          "Florida",
+          "New York",
+          "Texas"
+        ],
+        "name": "State Selection: "
+      }
+    }
+  ],
+
+  "transform": [
+    {"filter": "datum.jurisdiction == 'CALIFORNIA' || datum.jurisdiction == 'TEXAS' || datum.jurisdiction == 'FLORIDA' || datum.jurisdiction == 'NEW YORK'"},
+    {"filter": "datum.jurisdiction == State_selection"},
+
+    {"calculate": "datum.prisoner_count/datum.state_population * 10000", "as": "Total Prisoners"},
+    {"calculate": "datum.robbery/datum.state_population * 10000", "as": "Robberies"},
+    {"calculate": "datum.agg_assault/datum.state_population * 10000", "as": "Assaults"},
+    {"calculate": "datum.burglary/datum.state_population * 10000", "as": "Burglaries"},
+    {"calculate": "datum.vehicle_theft/datum.state_population * 10000", "as": "Vehicle Thefts"},
+    
+    {"fold": ["Total Prisoners", "Robberies", "Assaults", "Burglaries", "Vehicle Thefts"]}
+  ],
+
+  "layer": [
+    {
+      "mark": {"type": "line", "point": true},
+      "encoding": {
+        "x": {
+          "field": "year",
+          "type": "temporal",
+          "timeUnit": "year",
+          "axis": {"title": "Year", "tickCount": 10, "grid": false}
+        },
+        "y": {
+          "field": "value", 
+          "type": "quantitative", 
+          "title": "Rate per 10,000 People"
+        },
+        "color": {
+          "field": "key", 
+          "type": "nominal",
+          "title": "Crime"
+        },
+        "tooltip": [
+          {"field": "jurisdiction", "type": "nominal", "title": "Jurisdiction"},
+          {"field": "prisoner_count", "type": "quantitative", "title": "Prisoners", "format": ","},
+          {"field": "robbery", "type": "quantitative", "title": "Robberies", "format": ","},
+          {"field": "agg_assault", "type": "quantitative", "title": "Assaults", "format": ","},
+          {"field": "burglary", "type": "quantitative", "title": "Burglaries", "format": ","},
+          {"field": "vehicle_theft", "type": "quantitative", "title": "Vehicle Thefts", "format": ","}
+        ]
+      }
+    },
+    {
+      "data": {"values": [{}]},
+      "mark": {"type": "rule", "strokeDash": [2, 2], "size": 2},
+      "encoding": {"x": {"datum": {"year": 2008}}}
+    },
+    {
+      "data": {
+        "values": [{
+          "x": 1202999999991,
+          "y": 3
+        }]
+      },
+      "mark": {"type": "text", "align": "left"},
+      "encoding": {
+        "text": {"value": "2008 had the highest total prison population in America!"},
+        "x": {"field": "x", "type": "temporal"},
+        "y": {"field": "y", "type": "quantitative"}
+      }
+    }
+  ]
+}
