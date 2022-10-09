@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 800,
+  "width": "container",
   "height": 400,
-  "title": "Prison Rates Around the World",
+  "title": "Prison Rates Around the World (2021)",
   "projection": {"type": "equalEarth"},
   "data": {
     "url": "https://raw.githubusercontent.com/nkan0016/FIT3179-DV2/main/data/countries_topo.json",
@@ -22,17 +22,17 @@
     },
     {
       "data": {
-        "url": "https://raw.githubusercontent.com/nkan0016/FIT3179-DV2/main/data/graticules_topo.json",
-        "format": {"type": "topojson", "feature": "ne_110m_graticules_30"}
-      },
-      "mark": {"type": "geoshape", "fill": null, "stroke": "lightgray"}
-    },
-    {
-      "data": {
         "url": "https://raw.githubusercontent.com/FIT3179/Vega-Lite/main/7_others/oceans.topojson",
         "format": {"type": "topojson", "feature": "oceans"}
       },
       "mark": {"type": "geoshape", "fill": "skyblue"}
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/nkan0016/FIT3179-DV2/main/data/graticules_topo.json",
+        "format": {"type": "topojson", "feature": "ne_110m_graticules_30"}
+      },
+      "mark": {"type": "geoshape", "fill": null, "stroke": "lightgray"}
     },
 
     {
@@ -48,14 +48,17 @@
             "fields": ["Prison Population Rate"]
           }
         },
-        {"calculate": "datum['Prison Population Rate'] / 10", "as": "Prison Population per 10,000"}
+        {"calculate": "round(datum['Prison Population Rate'] / 10)", "as": "Prison Population per 10,000"}
       ],
       "mark": {"type": "geoshape", "stroke": "black"},
       "encoding": {
         "color": {
           "field": "Prison Population per 10,000",
           "title": "Prison Pop. per 10,000",
-          "type": "quantitative"
+          "type": "quantitative",
+          "scale": {"type": "threshold",
+                    "domain": [5, 15, 25, 40],
+                    "range": ["#fef0d9", "#fdcc8a", "#fc8d59", "#e34a33", "#b30000"]}
         },
         "tooltip": [
           {"field": "properties.NAME", "type": "nominal", "title": "Country"},

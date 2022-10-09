@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "Prison Population per 10,000 People in USA (2016)",
-  "width": 800,
+  "width": "container",
   "height": 400,
   "projection": {"type": "albersUsa"},
   "data": {
@@ -28,7 +28,9 @@
       "field": "Prison Population per 10,000",
       "title": "Prison Pop. per 10,000",
       "type": "quantitative",
-      "scale": {"type": "band", "range": ["#fef0d9", "#fdcc8a", "#fc8d59", "#e34a33", "#b30000"]}
+      "scale": {"type": "threshold",
+      "domain": [15, 25, 40, 50],
+      "range": ["#fef0d9", "#fdcc8a", "#fc8d59", "#e34a33", "#b30000"]}
     },
     "tooltip": [
       {"field": "properties.NAME", "type": "nominal", "title": "State"},

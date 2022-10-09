@@ -8,3 +8,8 @@
     color: lightgrey;
     font-size: 40px;
 }
+
+#vis1 {
+    width: 100%;
+    height: 400px;
+}
