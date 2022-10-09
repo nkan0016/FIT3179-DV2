@@ -30,7 +30,7 @@
         <div class="pure-u-1-5"></div>
 
         <div class="pure-u-2-5">
-            <div id="vis1" class="vis-container" style="width: 100%;"></div>
+            <div id="vis1-2" class="vis-container" style="width: 100%;"></div>
         </div>
 
         <div class="pure-u-1-5">
@@ -59,7 +59,22 @@
         <div class="pure-u-1-5"></div>
     </div>
 
-    
+    <!-- Second Row of Viz -->
+    <div class="pure-g">
+        <div class="pure-u-1-5"></div>
+
+        <div class="pure-u-3-5">
+            <div id="vis3" class="vis-container" style="width: 100%;"></div>
+        </div>
+
+        <!-- <div class="pure-u-1-5">
+            <div id="text_div2">
+                <h1>Crimes in the USA</h1>
+            </div>
+        </div> -->
+
+        <div class="pure-u-1-5"></div>
+    </div>
 
 
     
@@ -68,13 +83,15 @@
         const worldBtn = document.getElementById("World");
         var specVis1 = "usamap.json";
         var specVis2 = "worldmap.json";
-        vegaEmbed('#vis1', specVis1)
+        var specVis3 = "different_crimes.json"
+        vegaEmbed("#vis3", specVis3)
+        vegaEmbed('#vis1-2', specVis1)
 
         function showMap() {
             if(usaBtn.checked) {
-                vegaEmbed('#vis1', specVis1)
+                vegaEmbed('#vis1-2', specVis1)
             } else if(worldBtn.checked) {
-                vegaEmbed('#vis1', specVis2)
+                vegaEmbed('#vis1-2', specVis2)
             }
         }
 

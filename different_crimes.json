@@ -43,8 +43,8 @@
 
   "hconcat": [
     {
-      "width": 400,
-      "height": 300,
+      "width": 550,
+      "height": 350,
       "layer": [
         {
           "mark": {"type": "line", "point": true},
@@ -97,7 +97,7 @@
     },
     {
       "width": 400,
-      "height": 300,
+      "height": 350,
       "transform": [
             {"filter": "state_selection == null || datum.jurisdiction == state_selection"}
       ],
