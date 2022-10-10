@@ -1,6 +1,6 @@
-Race,Offenses Charged,Population,
-Total,"9,797,385","311,556,874",
-White,"6,923,390","243,292,145",
-Black,"2,633,632","40,783,547",
-Native American,"130,636","3,801,451",
-Asian/Islander,"109,727","16,321,072",
+Race,Offenses Charged,Population,Rate_per_ten
+Total,"9,797,385","238,952,977",0.410013096
+White,"6,923,390","186,596,372",0.371035617
+Black,"2,633,632","31,279,522",0.841966831
+Native American,"130,636","2,915,577",0.448062253
+Asian/Islander,"109,727","12,517,678",0.087657631

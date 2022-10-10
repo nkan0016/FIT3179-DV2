@@ -67,11 +67,28 @@
             <div id="vis3" class="vis-container" style="width: 100%;"></div>
         </div>
 
-        <!-- <div class="pure-u-1-5">
+        <div class="pure-u-1-5"></div>
+    </div>
+
+    <!-- Third Row of Viz -->
+    <div class="pure-g">
+        <div class="pure-u-1-5"></div>
+
+        <div class="pure-u-1-5">
             <div id="text_div2">
                 <h1>Crimes in the USA</h1>
             </div>
-        </div> -->
+        </div>
+
+        <div class="pure-u-1-5">
+            <div id="vis4" class="vis-container" style="width: 100%;"></div>
+        </div>
+
+        <div class="pure-u-1-5">
+            <div id="text_div2">
+                <h1>Crimes in the USA</h1>
+            </div>
+        </div>
 
         <div class="pure-u-1-5"></div>
     </div>
@@ -84,8 +101,10 @@
         var specVis1 = "usamap.json";
         var specVis2 = "worldmap.json";
         var specVis3 = "different_crimes.json"
+        var specVis4 = "demographics.json"
         vegaEmbed("#vis3", specVis3)
         vegaEmbed('#vis1-2', specVis1)
+        vegaEmbed("#vis4", specVis4)
 
         function showMap() {
             if(usaBtn.checked) {
