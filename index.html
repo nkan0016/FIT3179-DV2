@@ -15,12 +15,17 @@
 
     <!-- CSS file -->
     <link rel="stylesheet" type="text/css" href="css/style.css" media="all">
+
+    <!-- Importing Bold and Light Roboto Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,300;1,400&family=Roboto:wght@300;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <!-- Title -->
     <div class="pure-g">
-        <div class="pure-u-1" id="banner">
+        <div class="pure-u-1 banner">
             <h1 class="title">The United States Prison Industrial Complex</h1>
         </div>
     </div>
@@ -29,23 +34,20 @@
     <div class="pure-g">
         <div class="pure-u-1-5"></div>
 
-        <div class="pure-u-2-5">
+        <div class="pure-u-2-5 central">
             <div id="vis1-2" class="vis-container" style="width: 100%;"></div>
         </div>
 
-        <div class="pure-u-1-5">
-            <div id="text_div1">
-                <h1>Prison Population Rates</h1>
+        <div class="pure-u-1-5 central">
+            <div class="text_div" id="text_div1">
+                <h1 style="text-align: center;">Prison Population Rates</h1>
                 <p>Despite being a relatively safe and crime-free country, the United States of America
-                    has the highest prison population rate in the world! Text text text text text text
-                    text text text text text text text text text text text text text text text text text
-                    text text text text text text text text text text text text text text text text text
+                    has the highest prison population rate in the world! This is largely due to the existence of private
+                    prison systems that prioritise profit over rehabilitation.
                 </p>
 
-                <p>Despite being a relatively safe and crime-free country, the United States of America
-                    has the highest prison population rate in the world! Text text text text text text
-                    text text text text text text text text text text text text text text text text text
-                    text text text text text text text text text text text text text text text text text
+                <p>Hover over different states to compare their prison population rate. You can also click the world map
+                    and hover over different countries to see how the prison rate of different countries compare to America.
                 </p>
 
                 <input type="radio" id="USA" name="map" checked onclick="showMap();">
@@ -63,7 +65,7 @@
     <div class="pure-g">
         <div class="pure-u-1-5"></div>
 
-        <div class="pure-u-3-5">
+        <div class="pure-u-3-5 central">
             <div id="vis3" class="vis-container" style="width: 100%;"></div>
         </div>
 
@@ -74,19 +76,41 @@
     <div class="pure-g">
         <div class="pure-u-1-5"></div>
 
-        <div class="pure-u-1-5">
-            <div id="text_div2">
-                <h1>Crimes in the USA</h1>
+        <div class="pure-u-1-5 central">
+            <div class="text_div" id="text_div2">
+                <h1 style="text-align: center;">Crimes in the USA</h1>
+                <p>
+                    The charts above show how the prison rate has changed over time for the states with the 
+                    highest populations, and the break up of reported crime types for those states. Select the drop down
+                    menu and select a state to filter the charts by it.
+                </p>    
+                <p>
+                    The highest prison rate ever recorded worldwide occurred federally for the United States in 2008.
+                    Recent trends show that the rate of incarceration has been dropping over the past decade, which is 
+                    great news but we still have a long way to go!
+                </p>
             </div>
         </div>
 
-        <div class="pure-u-1-5">
+        <div class="pure-u-1-5 central">
             <div id="vis4" class="vis-container" style="width: 100%;"></div>
         </div>
 
-        <div class="pure-u-1-5">
-            <div id="text_div2">
-                <h1>Crimes in the USA</h1>
+        <div class="pure-u-1-5 central">
+            <div class="text_div" id="text_div2">
+                <h1 style="text-align: center;">Demographics</h1>
+                <p>
+                    A consequence of the privatisation of the prison industry is that it perpetuates
+                    the class and racial divide that already exist in America. Not only is it much more
+                    difficult to get back on your feet after serving time in prison, but the system also
+                    targets already disenfranchised populations such as people of colour.
+                </p>
+
+                <p>
+                    As the chart shows, 1 in 20 white men will face prison time over the course of their life, while 3 in 10
+                    black men will face prison time at some point in their life. That means a black man is 6 times more likely
+                    to end up in prison than a white man!
+                </p>
             </div>
         </div>
 

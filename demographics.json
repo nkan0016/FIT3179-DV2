@@ -34,7 +34,7 @@
   
     "vconcat": [
       {
-        "title": "White Man Crime Rate",
+        "title": "White Man Likelihood of Imprisonment",
         "width": "container",
         "height": 170,
         "mark": {"type": "point", "filled": true},
@@ -52,7 +52,7 @@
         }
       },
       {
-        "title": "Black Man Crime Rate",
+        "title": "Black Man Likelihood of Imprisonment",
         "width": "container",
         "height": 170,
   

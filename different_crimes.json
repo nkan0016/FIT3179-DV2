@@ -43,7 +43,7 @@
 
   "hconcat": [
     {
-      "width": 550,
+      "width": "container",
       "height": 350,
       "title": "Prison Rate per 10,000 People Over Time in USA",
       "layer": [
@@ -101,7 +101,7 @@
       ]
     },
     {
-      "width": 400,
+      "width": "container",
       "height": 350,
       "title": "Reported Crimes by Crime Type in 2016",
       "transform": [
