@@ -69,7 +69,11 @@
           },
           "scale": {"type": "threshold",
                     "domain": [5, 15, 25, 40],
-                    "range": ["#fef0d9", "#fdcc8a", "#fc8d59", "#e34a33", "#b30000"]},
+                    "range": ["#feebe2",
+                    "#fbb4b9",
+                    "#f768a1",
+                    "#c51b8a",
+                    "#7a0177"]},
           "legend": {
             "orient": "none",
             "legendX": 225,

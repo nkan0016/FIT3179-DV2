@@ -135,7 +135,8 @@
           "field": "jurisdiction", 
           "type": "nominal",
           "title": "Crime",
-          "legend": null
+          "legend": null,
+          "scale": {"range": ["#66c2a5","#fc8d62","#8da0cb","#e78ac3"]}
         }
       }
     }

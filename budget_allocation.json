@@ -1,16 +1,26 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 300,
-    "height": 200,
+    "title": {
+      "text": "Corrections Budget Allocation 2013",
+      "anchor": "middle"
+    },
+    "width": "container",
+    "height": 220,
     "data": {"url": "https://raw.githubusercontent.com/nkan0016/FIT3179-DV2/main/data/budget_allocation.csv"},
     "mark": {"type": "arc", "innerRadius": 50},
     "encoding": {
       "theta": {"field": "Budget", "type": "quantitative", "stack": true},
       "order": {"field": "Budget", "type": "quantitative", "sort": "descending"},
-      "color": {"field": "Sector", "type": "nominal"}
+      "color": {"field": "Sector", "type": "nominal", "scale": {"range": ["#e7298a",
+        "#d95f02",
+        "#7570b3",
+        "#1b9e77",
+        "#66a61e",
+        "#e6ab02"]},
+      "legend": null}
     },
     "config": {
-
+      
       "style": {
         "cell": {
           "stroke": "transparent"

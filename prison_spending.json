@@ -1,41 +1,82 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "config": {
-        "style": {
-          "cell": {
-            "stroke": "transparent"
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Government Budget Spending 1982 - 2010",
+    "anchor": "middle"
+  },
+  "config": {
+      "style": {
+        "cell": {
+          "stroke": "transparent"
+        }
+      }
+    },
+  "data": {"url": "https://raw.githubusercontent.com/nkan0016/FIT3179-DV2/main/data/prison_spending_long.csv"},
+
+  "transform": [
+    {"filter": "datum.Sector != 'Total'"},
+    {"filter": "datum.Sector != 'Other'"}
+  ],
+
+  "vconcat": [
+    {
+      "width": 575,
+      "height": 300,
+      "mark": "area",
+      "encoding": {
+        "x": {
+          "field": "Year",
+          "type": "temporal",
+          "scale": {"domain": {"param": "brush"}},
+          "axis": {
+            "labelAngle": 0,
+            "tickCount": 5,
+            "title": null
+          }
+        },
+        "y": {
+          "field": "Spending",
+          "type": "quantitative",
+          "title": "Spending ($ Billions)"
+        },
+        "color": {
+          "field": "Sector",
+          "scale": {"range": ["#fa1b35", "#3b304d", "#f5b73b", "#3a4991", "#809191"]},
+          "legend": {
+              "orient": "none",
+              "legendX": 5,
+              "legendY": 5
           }
         }
-      },
-    "width": "container", 
-    "height": 300,
-    "data": {"url": "https://raw.githubusercontent.com/nkan0016/FIT3179-DV2/main/data/prison_spending_long.csv"},
-  
-    "transform": [
-      {"filter": "datum.Sector != 'Total'"},
-      {"filter": "datum.Sector != 'Other'"}
-    ],
-  
-    "mark": "area",
-    "encoding": {
-      "x": {
-        "field": "Year",
-        "type": "temporal",
-        "axis": {
-          "labelAngle": 0,
-          "tickCount": 5
-        }
-      },
-      "y": {
-        "field": "Spending",
-        "type": "quantitative",
-        "title": "Spending ($ Billions)"
-      },
-      "color": {
-        "field": "Sector",
-        "legend": {
-            "orient": "top-left"
+      }
+    },
+    {
+      "width":575,
+      "height": 60,
+      "mark": "area",
+      "params": [
+        {"name": "brush", "select": {"type": "interval", "encodings": ["x"]}}
+      ],
+      "encoding": {
+        "x": {
+          "field": "Year",
+          "type": "temporal",
+          "axis": {
+            "labelAngle": 0,
+            "tickCount": 5
+          },
+          "title": "Date"
+        },
+        "y": {
+          "field": "Spending",
+          "type": "quantitative",
+          "title": "Spending ($ Billions)"
+        },
+        "color": {
+          "field": "Sector",
+          "legend": null
         }
       }
     }
-  }
+  ]
+}
