@@ -1,167 +1,167 @@
-﻿Country,Total
-China,1 690 000
-United States of America,1 675 400
-Brazil,835 643
-India,554 034
-Russian Federation,468 237
-Turkey,314 502
-Thailand,285 572
-Indonesia,275 518
-Mexico,229 621
-Iran,189 000
-Philippines,166 912
-South Africa,144 938
-Vietnam,125 697
-Egypt,119 000
-Argentina,114 074
-Ethiopia,110 000
-Myanmar (formerly Burma),100 324
-Colombia,97 316
-Algeria,94 749
-Peru,89 948
-Morocco,88 941
-Pakistan,85 670
-Bangladesh,83 837
-United Kingdom: England & Wales,81 309
-Rwanda,76 099
-Nigeria,75 639
-Iraq,73 715
-Poland,72 302
-France,72 067
-Uganda,70 119
-Malaysia,69 507
-Saudi Arabia,c. 68 056
-Venezuela,67 200
-Cuba,57 337
-Germany,56 069
-Italy,55 835
-Taiwan,55 463
-Spain,55 097
-Republic of (South) Korea,53 920
-Kenya,52 979
-Ukraine,48 038
-Japan,45 714
-Chile,43 772
-Australia,42 403
-El Salvador,39 538
-Cambodia,39 000
-Kazakhstan,35 228
-Turkmenistan,35 000
-Tanzania,33 570
-Belarus,32 556
-Ecuador,32 466
-Canada,32 261
-Cameroon,32 003
-Afghanistan,28 240
-Madagascar,27 611
-Dominican Republic,26 794
-Nepal,25 400
-Guatemala,24 595
-Angola,24 336
-Tunisia,23 484
-Romania,23 214
-Zambia,23 062
-Cote d'Ivoire,23 000
-Uzbekistan,22 867
-Democratic Republic of Congo,22 820
-Sri Lanka,22 000
-Azerbaijan,21 813
-Panama,21 113
-Sudan,21 000
-Nicaragua,20 918
-Zimbabwe,20 898
-Bolivia,20 864
-Honduras,20 768
-Czech Republic,19 140
-Hungary,18 800
-Mozambique,18 700
-Jordan,17 708
-Paraguay,16 267
-Costa Rica,15 516
-Israel,14 961
-Malawi,14 500
-Ghana,14 444
-Uruguay,14 347
-Tajikistan,14 000
-Benin,13 009
-Burundi,12 694
-Senegal,12 430
-Libya,12 300
-Portugal,12 269
-Laos,11 885
-Netherlands,11 623
-Haiti,11 253
-Greece,11 131
-Syria,10 599
-Serbia,10 436
-Belgium,10 379
-Singapore,10 262
-Kyrgyzstan,10 142
-Slovakia,9 984
-United Arab Emirates,9 826
-Yemen,9 719
-Georgia,9 645
-Niger,9 187
-Namibia,8 900
-Puerto Rico (USA),8 884
-Chad,8 700
-Mali,8 670
-Austria,8 456
-Hong Kong (China),7 867
-New Zealand,7 728
-United Kingdom: Scotland,7 408
-Lebanon,7 401
-Burkina Faso,7 401
-Sweden,7 317
-South Sudan,7 000
-Moldova (Republic of),6 461
-Switzerland,6 310
-Bulgaria,6 080
-Mongolia,5 832
-Gabon,5 226
-Lithuania,5 089
-Papua New Guinea,5 087
-Albania,5 054
-Togo,4 990
-Sierra Leone,4 430
-Kuwait,4 420
-Guinea (Republic of),4 375
-Denmark,4 248
-"Ireland, Republic of",4 197
-Croatia,3 955
-Botswana,3 882
-Trinidad and Tobago,3 802
-Jamaica,3 719
-Bahrain,3 485
-eSwatini/Swaziland,3 362
-Latvia,3 124
-Norway,3 119
-Liberia,2 925
-Finland,2 827
-Mauritius,2 509
-Fiji,2 379
-North Macedonia,2 220
-Lesotho,2 216
-Armenia,2 113
-Estonia,2 112
-Mauritania,2 023
-Oman,1 960
-Guyana,1 889
-Bosnia and Herzegovina: Federation,1 813
-United Kingdom: Northern Ireland,1 709
-Maldives,1 700
-Kosovo/Kosova,1 642
-Bahamas,1 617
-Cape Verde (Cabo Verde),1 549
-Macau (China),1 497
-Slovenia,1 397
-Congo (Republic of),1 388
-Central African Republic,1 291
-Reunion (France),1 179
-Qatar,1 150
-Bhutan,1 119
-Belize,1 114
-Suriname,1 000
+﻿Title,Total
+China,1690000
+United States of America,1675400
+Brazil,835643
+India,554034
+Russian Federation,468237
+Turkey,314502
+Thailand,285572
+Indonesia,275518
+Mexico,229621
+Iran,189000
+Philippines,166912
+South Africa,144938
+Vietnam,125697
+Egypt,119000
+Argentina,114074
+Ethiopia,110000
+Myanmar (formerly Burma),100324
+Colombia,97316
+Algeria,94749
+Peru,89948
+Morocco,88941
+Pakistan,85670
+Bangladesh,83837
+United Kingdom: England & Wales,81309
+Rwanda,76099
+Nigeria,75639
+Iraq,73715
+Poland,72302
+France,72067
+Uganda,70119
+Malaysia,69507
+Saudi Arabia,68056
+Venezuela,67200
+Cuba,57337
+Germany,56069
+Italy,55835
+Taiwan,55463
+Spain,55097
+Republic of (South) Korea,53920
+Kenya,52979
+Ukraine,48038
+Japan,45714
+Chile,43772
+Australia,42403
+El Salvador,39538
+Cambodia,39000
+Kazakhstan,35228
+Turkmenistan,35000
+Tanzania,33570
+Belarus,32556
+Ecuador,32466
+Canada,32261
+Cameroon,32003
+Afghanistan,28240
+Madagascar,27611
+Dominican Republic,26794
+Nepal,25400
+Guatemala,24595
+Angola,24336
+Tunisia,23484
+Romania,23214
+Zambia,23062
+Cote d'Ivoire,23000
+Uzbekistan,22867
+Democratic Republic of Congo,22820
+Sri Lanka,22000
+Azerbaijan,21813
+Panama,21113
+Sudan,21000
+Nicaragua,20918
+Zimbabwe,20898
+Bolivia,20864
+Honduras,20768
+Czech Republic,19140
+Hungary,18800
+Mozambique,18700
+Jordan,17708
+Paraguay,16267
+Costa Rica,15516
+Israel,14961
+Malawi,14500
+Ghana,14444
+Uruguay,14347
+Tajikistan,14000
+Benin,13009
+Burundi,12694
+Senegal,12430
+Libya,12300
+Portugal,12269
+Laos,11885
+Netherlands,11623
+Haiti,11253
+Greece,11131
+Syria,10599
+Serbia,10436
+Belgium,10379
+Singapore,10262
+Kyrgyzstan,10142
+Slovakia,9984
+United Arab Emirates,9826
+Yemen,9719
+Georgia,9645
+Niger,9187
+Namibia,8900
+Puerto Rico (USA),8884
+Chad,8700
+Mali,8670
+Austria,8456
+Hong Kong (China),7867
+New Zealand,7728
+United Kingdom: Scotland,7408
+Lebanon,7401
+Burkina Faso,7401
+Sweden,7317
+South Sudan,7000
+Moldova (Republic of),6461
+Switzerland,6310
+Bulgaria,6080
+Mongolia,5832
+Gabon,5226
+Lithuania,5089
+Papua New Guinea,5087
+Albania,5054
+Togo,4990
+Sierra Leone,4430
+Kuwait,4420
+Guinea (Republic of),4375
+Denmark,4248
+"Ireland, Republic of",4197
+Croatia,3955
+Botswana,3882
+Trinidad and Tobago,3802
+Jamaica,3719
+Bahrain,3485
+eSwatini/Swaziland,3362
+Latvia,3124
+Norway,3119
+Liberia,2925
+Finland,2827
+Mauritius,2509
+Fiji,2379
+North Macedonia,2220
+Lesotho,2216
+Armenia,2113
+Estonia,2112
+Mauritania,2023
+Oman,1960
+Guyana,1889
+Bosnia and Herzegovina: Federation,1813
+United Kingdom: Northern Ireland,1709
+Maldives,1700
+Kosovo/Kosova,1642
+Bahamas,1617
+Cape Verde (Cabo Verde),1549
+Macau (China),1497
+Slovenia,1397
+Congo (Republic of),1388
+Central African Republic,1291
+Reunion (France),1179
+Qatar,1150
+Bhutan,1119
+Belize,1114
+Suriname,1000
 Martinique (France),916
 Brunei Darussalam,841
 Montenegro,836
