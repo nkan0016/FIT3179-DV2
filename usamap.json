@@ -27,7 +27,18 @@
         "fields": ["state", "y2016"]
       }
     },
-    {"calculate": "round(10000*datum.y2016 / datum.state)", "as": "Prison Population per 10,000"}
+    {"calculate": "round(10000*datum.y2016 / datum.state)", "as": "Prison Population per 10,000"},
+    {
+      "lookup": "properties.NAME",
+      "from": {
+        "data": {
+          "url": "12",
+          "format": {"type": "csv"}
+        },
+        "key": "Country",
+        "fields": ["Total"]
+      }
+    }
   ],
   "mark": {"type": "geoshape", "stroke": "black"},
   "encoding": {
@@ -37,11 +48,7 @@
       "type": "quantitative",
       "scale": {"type": "threshold",
       "domain": [15, 25, 40, 50],
-      "range": ["#feebe2",
-        "#fbb4b9",
-        "#f768a1",
-        "#c51b8a",
-        "#7a0177"]},
+      "range": ["#feebe2", "#fbb4b9", "#f768a1", "#c51b8a", "#7a0177"]},
       "legend": {
         "orient": "none",
         "legendX": 225,
@@ -52,7 +59,7 @@
     },
     "tooltip": [
       {"field": "properties.NAME", "type": "nominal", "title": "State"},
-      {"field": "Prison Population per 10,000", "type": "quantitative", "title":"Prison Pop. per 10,000"}
+      {"field": "Prison Population per 10,000", "type": "quantitative", "title":"Prison Rate per 10,000"}
     ]
   }
 }
