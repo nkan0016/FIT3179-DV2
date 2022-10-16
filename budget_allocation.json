@@ -1,0 +1,20 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 300,
+    "height": 200,
+    "data": {"url": "https://raw.githubusercontent.com/nkan0016/FIT3179-DV2/main/data/budget_allocation.csv"},
+    "mark": {"type": "arc", "innerRadius": 50},
+    "encoding": {
+      "theta": {"field": "Budget", "type": "quantitative", "stack": true},
+      "order": {"field": "Budget", "type": "quantitative", "sort": "descending"},
+      "color": {"field": "Sector", "type": "nominal"}
+    },
+    "config": {
+
+      "style": {
+        "cell": {
+          "stroke": "transparent"
+        }
+      }
+    }
+  }

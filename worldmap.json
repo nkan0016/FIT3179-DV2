@@ -1,5 +1,12 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "config": {
+    "style": {
+      "cell": {
+        "stroke": "transparent"
+      }
+    }
+  },
   "width": "container",
   "height": 400,
   "title": "Prison Rates Around the World (2021)",
@@ -48,21 +55,32 @@
             "fields": ["Prison Population Rate"]
           }
         },
-        {"calculate": "round(datum['Prison Population Rate'] / 10)", "as": "Prison Population per 10,000"}
+        {"calculate": "round(datum['Prison Population Rate'] / 10)", "as": "norm_pop"}
       ],
       "mark": {"type": "geoshape", "stroke": "black"},
       "encoding": {
         "color": {
-          "field": "Prison Population per 10,000",
+          "field": "norm_pop",
           "title": "Prison Pop. per 10,000",
           "type": "quantitative",
+          "condition": {
+            "test": "datum['norm_pop'] == 0",
+            "value": "lightgray"
+          },
           "scale": {"type": "threshold",
                     "domain": [5, 15, 25, 40],
-                    "range": ["#fef0d9", "#fdcc8a", "#fc8d59", "#e34a33", "#b30000"]}
+                    "range": ["#fef0d9", "#fdcc8a", "#fc8d59", "#e34a33", "#b30000"]},
+          "legend": {
+            "orient": "none",
+            "legendX": 225,
+            "legendY": 365,
+            "direction": "horizontal",
+            "titleAnchor": "middle"
+          }
         },
         "tooltip": [
           {"field": "properties.NAME", "type": "nominal", "title": "Country"},
-          {"field": "Prison Population per 10,000", "type": "quantitative", "title": "Prison Pop. per 10,000"}
+          {"field": "norm_pop", "type": "quantitative", "title": "Prison Pop. per 10,000"}
         ]
       }
     }   

@@ -1,0 +1,41 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "config": {
+        "style": {
+          "cell": {
+            "stroke": "transparent"
+          }
+        }
+      },
+    "width": "container", 
+    "height": 300,
+    "data": {"url": "https://raw.githubusercontent.com/nkan0016/FIT3179-DV2/main/data/prison_spending_long.csv"},
+  
+    "transform": [
+      {"filter": "datum.Sector != 'Total'"},
+      {"filter": "datum.Sector != 'Other'"}
+    ],
+  
+    "mark": "area",
+    "encoding": {
+      "x": {
+        "field": "Year",
+        "type": "temporal",
+        "axis": {
+          "labelAngle": 0,
+          "tickCount": 5
+        }
+      },
+      "y": {
+        "field": "Spending",
+        "type": "quantitative",
+        "title": "Spending ($ Billions)"
+      },
+      "color": {
+        "field": "Sector",
+        "legend": {
+            "orient": "top-left"
+        }
+      }
+    }
+  }

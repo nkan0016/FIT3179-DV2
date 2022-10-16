@@ -23,101 +23,139 @@
 </head>
 
 <body>
-    <!-- Title -->
-    <div class="pure-g">
-        <div class="pure-u-1 banner">
-            <h1 class="title">The United States Prison Industrial Complex</h1>
-        </div>
-    </div>
-
-    <!-- First Row of Viz -->
-    <div class="pure-g">
-        <div class="pure-u-1-5"></div>
-
-        <div class="pure-u-2-5 central">
-            <div id="vis1-2" class="vis-container" style="width: 100%;"></div>
-        </div>
-
-        <div class="pure-u-1-5 central">
-            <div class="text_div" id="text_div1">
-                <h1 style="text-align: center;">Prison Population Rates</h1>
-                <p>Despite being a relatively safe and crime-free country, the United States of America
-                    has the highest prison population rate in the world! This is largely due to the existence of private
-                    prison systems that prioritise profit over rehabilitation.
-                </p>
-
-                <p>Hover over different states to compare their prison population rate. You can also click the world map
-                    and hover over different countries to see how the prison rate of different countries compare to America.
-                </p>
-
-                <input type="radio" id="USA" name="map" checked onclick="showMap();">
-                <label for="USA">USA Map</label>
-
-                <input type="radio" id="World" name="map" onclick="showMap();">
-                <label for="World">World Map</label>
+    <div id="visualisation">
+        <!-- Title -->
+        <div class="pure-g" id="banner">
+            <div class="pure-u-1">
+                <h1 class="title">The United States Prison Industrial Complex</h1>
             </div>
         </div>
 
-        <div class="pure-u-1-5"></div>
-    </div>
+        <!-- First Row of Viz -->
+        <div class="pure-g">
+            <div class="pure-u-2-3 central">
+                <div id="vis1-2" class="vis-container" style="width: 95%;"></div>
+            </div>
 
-    <!-- Second Row of Viz -->
-    <div class="pure-g">
-        <div class="pure-u-1-5"></div>
+            <div class="pure-u-1-3 central">
+                <div class="text_div" id="text_div1">
+                    <h1 style="text-align: center;">Prison Population Rates</h1>
 
-        <div class="pure-u-3-5 central">
-            <div id="vis3" class="vis-container" style="width: 100%;"></div>
-        </div>
+                    <p>Despite being a relatively safe and crime-free country, the United States of America
+                        has the highest prison population rate in the world! This is largely due to the existence of private
+                        prison systems that prioritise profit over rehabilitation.
+                    </p>
 
-        <div class="pure-u-1-5"></div>
-    </div>
+                    <p>Hover over different states to compare their prison population rate. You can also click the world map
+                        and hover over different countries to see how the prison rate of different countries compare to America.
+                    </p>
 
-    <!-- Third Row of Viz -->
-    <div class="pure-g">
-        <div class="pure-u-1-5"></div>
+                    <div style="padding-bottom: 10px;">
+                        <input type="radio" id="USA" name="map" checked onclick="showMap();">
+                        <label for="USA">USA Map</label>
+                    </div>
 
-        <div class="pure-u-1-5 central">
-            <div class="text_div" id="text_div2">
-                <h1 style="text-align: center;">Crimes in the USA</h1>
-                <p>
-                    The charts above show how the prison rate has changed over time for the states with the 
-                    highest populations, and the break up of reported crime types for those states. Select the drop down
-                    menu and select a state to filter the charts by it.
-                </p>    
-                <p>
-                    The highest prison rate ever recorded worldwide occurred federally for the United States in 2008.
-                    Recent trends show that the rate of incarceration has been dropping over the past decade, which is 
-                    great news but we still have a long way to go!
-                </p>
+                    <div>
+                        <input type="radio" id="World" name="map" onclick="showMap();">
+                        <label for="World">World Map</label>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <div class="pure-u-1-5 central">
-            <div id="vis4" class="vis-container" style="width: 100%;"></div>
-        </div>
+        <!-- Second Row of Viz -->
+        <div class="pure-g">
+            <div class="pure-u-1-3 central">
+                <div class="text_div" id="text_div2">
+                    <h1 style="text-align: center;">Crimes in the USA</h1>
 
-        <div class="pure-u-1-5 central">
-            <div class="text_div" id="text_div2">
-                <h1 style="text-align: center;">Demographics</h1>
-                <p>
-                    A consequence of the privatisation of the prison industry is that it perpetuates
-                    the class and racial divide that already exist in America. Not only is it much more
-                    difficult to get back on your feet after serving time in prison, but the system also
-                    targets already disenfranchised populations such as people of colour.
-                </p>
+                    <p>
+                        The charts above show how the prison rate has changed over time for the states with the 
+                        highest populations, and the break up of reported crime types for those states. Select the drop down
+                        menu and select a state to filter the charts by it.
+                    </p>    
+                    <p>
+                        The highest prison rate ever recorded worldwide occurred federally for the United States in 2008.
+                        Recent trends show that the rate of incarceration has been dropping over the past decade, which is 
+                        great news but we still have a long way to go!
+                    </p>
+                </div>
+            </div>
 
-                <p>
-                    As the chart shows, 1 in 20 white men will face prison time over the course of their life, while 3 in 10
-                    black men will face prison time at some point in their life. That means a black man is 6 times more likely
-                    to end up in prison than a white man!
-                </p>
+            <div class="pure-u-2-3 central">
+                <div id="vis3" class="vis-container" style="width: 100%;"></div>
             </div>
         </div>
 
-        <div class="pure-u-1-5"></div>
+        <!-- Third Row of Viz -->
+        <div class="pure-g">
+            <div class="pure-u-2-3 central">
+                <div id="vis4" class="vis-container" style="width: 100%;"></div>
+            </div>
+
+            <div class="pure-u-1-3 central">
+                <div class="text_div" id="text_div2">
+                    <h1 style="text-align: center;">Demographics</h1>
+                    <p>
+                        A consequence of the privatisation of the prison industry is that it perpetuates
+                        the class and racial divide that already exist in America. Not only is it much more
+                        difficult to get back on your feet after serving time in prison, but the system also
+                        targets already disenfranchised populations such as people of colour.
+                    </p>
+
+                    <p>
+                        As the chart shows, 1 in 20 white men will face prison time over the course of their life, while 3 in 10
+                        black men will face prison time at some point in their life. That means a black man is 6 times more likely
+                        to end up in prison than a white man!
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fourth Row of Viz -->
+        <div class="pure-g">
+            <div class="pure-u-1-3 central">
+                <div class="text_div" id="text_div2">
+                    <h1 style="text-align: center;">Government Spending</h1>
+                    <p>
+                        Government spending on public prison systems have been relatively low compared to other
+                        investments. This has resulted in neglect of the prisoners has turned prisons into unjust and
+                        cruel punishments rather than rehabilitation centers.
+                    </p>
+
+                    <p>
+                        Additionally, private prisons enlist their prisoners to perform slave labour for companies, violating
+                        their human rights. Companies that use prison slave labour include Microsoft, McDonald's, Nike, and Intel.
+                    </p>
+
+                    <p style="font-size: 12px;">*Welfare data not available before 1995</p>
+                </div>
+            </div>
+
+            <div class="pure-u-2-3 central">
+                <div id="vis5" class="vis-container" style="width: 100%;"></div>
+            </div>
+        </div>
+
+        <!-- Fifth Row of Viz -->
+        <div class="pure-g">
+            <div class="pure-u-1-2 central">
+                <div id="vis6" class="vis-container" style="width: 100%;"></div>
+            </div>
+
+            <div class="pure-u-1-2 central">
+                <div class="text_div" id="text_div2">
+                    <h1 style="text-align: center;">Budget Allocation</h1>
+                    <p>
+                        Even the tiny amount of money that the public prison system is allocated is not spent optimally.
+                        The majority of money is spent in policing, causing an over-policing problem. There is also money
+                        allocated to subsidising private prisons! Meanwhile, only a small amount of money is spent on healthcare
+                        for prisoners.
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
-
-
     
     <script type="text/javascript">
         const usaBtn = document.getElementById("USA");
@@ -126,15 +164,19 @@
         var specVis2 = "worldmap.json";
         var specVis3 = "different_crimes.json"
         var specVis4 = "demographics.json"
-        vegaEmbed("#vis3", specVis3)
-        vegaEmbed('#vis1-2', specVis1)
-        vegaEmbed("#vis4", specVis4)
+        var specVis5 = "prison_spending.json"
+        var specVis6 = "budget_allocation.json"
+        vegaEmbed('#vis1-2', specVis1, {actions: false})
+        vegaEmbed("#vis3", specVis3, {actions: false})
+        vegaEmbed("#vis4", specVis4, {actions: false})
+        vegaEmbed("#vis5", specVis5, {actions: false})
+        vegaEmbed("#vis6", specVis6, {actions: false})
 
         function showMap() {
             if(usaBtn.checked) {
-                vegaEmbed('#vis1-2', specVis1)
+                vegaEmbed('#vis1-2', specVis1, {actions: false})
             } else if(worldBtn.checked) {
-                vegaEmbed('#vis1-2', specVis2)
+                vegaEmbed('#vis1-2', specVis2, {actions: false})
             }
         }
 

@@ -1,8 +1,15 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "config": {
+    "style": {
+      "cell": {
+        "stroke": "transparent"
+      }
+    }
+  },
   "title": "Prison Population per 10,000 People in USA (2016)",
   "width": "container",
-  "height": 400,
+  "height": 365,
   "projection": {"type": "albersUsa"},
   "data": {
       "url": "https://raw.githubusercontent.com/nkan0016/FIT3179-DV2/main/data/us_states.json",
@@ -30,7 +37,14 @@
       "type": "quantitative",
       "scale": {"type": "threshold",
       "domain": [15, 25, 40, 50],
-      "range": ["#fef0d9", "#fdcc8a", "#fc8d59", "#e34a33", "#b30000"]}
+      "range": ["#fef0d9", "#fdcc8a", "#fc8d59", "#e34a33", "#b30000"]},
+      "legend": {
+        "orient": "none",
+        "legendX": 225,
+        "legendY": 375,
+        "direction": "horizontal",
+        "titleAnchor": "middle"
+      }
     },
     "tooltip": [
       {"field": "properties.NAME", "type": "nominal", "title": "State"},
