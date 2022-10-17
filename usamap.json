@@ -50,7 +50,7 @@
     "tooltip": [
       {"field": "properties.NAME", "type": "nominal", "title": "State"},
       {"field": "Prison Population per 10,000", "type": "quantitative", "title":"Prison Rate per 10,000"},
-      {"field": "total", "type": "quantitative", "title": "Total Prisoners"}
+      {"field": "total", "type": "quantitative", "title": "Total Prisoners", "format": ","}
     ]
   }
 }

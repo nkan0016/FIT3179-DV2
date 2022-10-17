@@ -47,7 +47,12 @@
               "legendX": 5,
               "legendY": 5
           }
-        }
+        },
+        "tooltip": [
+          {"field": "Sector", "type": "nominal"},
+          {"field": "Year", "type": "temporal", "timeUnit": "year", "title": "Year"},
+          {"field": "Spending", "type": "quantitative", "title": "Budget (Bil)", "format": "$"}
+        ]
       }
     },
     {

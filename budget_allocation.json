@@ -1,30 +1,55 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": {
-      "text": "Corrections Budget Allocation 2013",
-      "anchor": "middle"
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "config": {
+    
+    "style": {
+      "cell": {
+        "stroke": "transparent"
+      }
+    }
+  },
+  "title": {
+    "text": "Corrections Budget Allocation 2013",
+    "anchor": "middle"
+  },
+  "width": "container",
+  "height": 260,
+  "data": {"url": "https://raw.githubusercontent.com/nkan0016/FIT3179-DV2/main/data/budget_allocation.csv"},
+
+  "layer": [
+    {
+      "mark": {"type": "arc", "innerRadius": 70},
+      "encoding": {
+        "theta": {"field": "Budget", "type": "quantitative", "stack": true},
+        "order": {"field": "Budget", "type": "quantitative", "sort": "descending"},
+        "color": {"field": "Sector", "type": "nominal", "scale": {"range": ["#e7298a",
+          "#d95f02",
+          "#7570b3",
+          "#1b9e77",
+          "#66a61e",
+          "#e6ab02"]},
+        "legend": null},
+        "tooltip": [
+          {"field": "Sector", "type": "nominal"},
+          {"field": "Budget", "type": "quantitative", "title": "Budget (Bil)", "format": "$"}
+        ]
+      }
     },
-    "width": "container",
-    "height": 220,
-    "data": {"url": "https://raw.githubusercontent.com/nkan0016/FIT3179-DV2/main/data/budget_allocation.csv"},
-    "mark": {"type": "arc", "innerRadius": 50},
-    "encoding": {
-      "theta": {"field": "Budget", "type": "quantitative", "stack": true},
-      "order": {"field": "Budget", "type": "quantitative", "sort": "descending"},
-      "color": {"field": "Sector", "type": "nominal", "scale": {"range": ["#e7298a",
-        "#d95f02",
-        "#7570b3",
-        "#1b9e77",
-        "#66a61e",
-        "#e6ab02"]},
-      "legend": null}
-    },
-    "config": {
-      
-      "style": {
-        "cell": {
-          "stroke": "transparent"
+    {
+      "data": {
+        "values": [{"category": ["Policing takes up 1/3", "of the whole budget!"], "value": ""}]
+      },
+      "mark": {"type": "text", 
+              "innerRadius": 0,
+              "fontSize": 12,
+              "fontWeight": "bold",
+              "color": "#1b9e77"},
+      "encoding": {
+        "text": {
+          "field": "category", 
+          "type": "nominal"
         }
       }
     }
-  }
+  ]
+}
